@@ -30,7 +30,7 @@ const hostelSchema = new mongoose.Schema({
   name: String,
   branch: String,
   month: String,
-  int: Number,
+  amount: Number,
   year: String,
 });
 
