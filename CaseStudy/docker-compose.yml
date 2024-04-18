@@ -1,15 +1,16 @@
 version: '3.8'
- 
+
 services:
-  nodejs:
+  king-16:
+    image: david-16
     build: .
     ports:
       - '7000:7000'
+    environment:
+      - MONGODB_URI:'mongodb://localhost:27017/trail'
     depends_on:
       - mongodb
-    environment:
-      - MONGODB_URI=mongodb://mongodb:27017
- 
+
   mongodb:
     image: mongo:latest
     ports:
